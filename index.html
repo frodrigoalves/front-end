@@ -1,103 +1,185 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SingulAI - Plataforma de Legado Digital</title>
-  <link rel="icon" href="logo-singulai.png" />
-  <meta name="description" content="SingulAI: uma plataforma de inteligência artificial com blockchain para preservar memórias e legados digitais.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SingulAI – O Futuro é Agora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <style>
-    .bg-primary { background-color: #080d49; }
-    .text-highlight { color: #6366f1; }
-    .bg-soft { background-color: #1f223f; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      color: #e2e8f0;
+      background: #0f172a;
+      overflow-x: hidden;
+    }
+    .background-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .background-video video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(15, 23, 42, 0.8);
+      position: relative;
+      z-index: 10;
+    }
+    header .logo img {
+      height: 40px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #a5b4fc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav .btn-header {
+      padding: 8px 16px;
+      background: #6366f1;
+      border-radius: 4px;
+      color: white;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #a78bfa;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    .btn {
+      padding: 12px 24px;
+      background: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: rgba(15, 23, 42, 0.8);
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #93c5fd;
+    }
+    .tech-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .tech-list li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+    }
+    .tech-list img {
+      width: 32px;
+      height: 32px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #64748b;
+      background: #0f172a;
+    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans">
+<body>
 
-  <!-- HEADER -->
-  <header class="bg-primary p-4 shadow flex justify-between items-center">
-    <h1 class="text-xl md:text-2xl font-bold">SingulAI</h1>
-    <nav class="flex gap-6 text-sm md:text-base text-gray-300">
-      <a href="#sobre" class="hover:text-white">Sobre</a>
-      <a href="#como-funciona" class="hover:text-white">Como Funciona</a>
-      <a href="#tecnologia" class="hover:text-white">Tecnologia</a>
-      <a href="dashboard.html" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded text-white font-semibold">Entrar no Painel</a>
+  <!-- Vídeo de Fundo -->
+  <div class="background-video">
+    <video autoplay muted loop>
+      <source src="assets/video3.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="SingulAI Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tecnologia">Tecnologia</a></li>
+        <li><a href="#seguranca">Segurança</a></li>
+        <li><a href="dashboard.html" class="btn-header">Acessar Plataforma</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="text-center px-6 py-20">
-    <h2 class="text-4xl font-bold text-highlight mb-4">O Futuro Não é uma Promessa, é um Legado</h2>
-    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">Combinando Inteligência Artificial e Blockchain, a SingulAI preserva memórias, emoções e histórias de forma eterna.</p>
-    <a href="dashboard.html" class="px-8 py-3 bg-highlight hover:bg-indigo-700 text-white rounded text-lg font-semibold transition">Acessar Plataforma</a>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>O Futuro Não é uma Promessa, é um Legado</h1>
+    <p>Combinando Inteligência Artificial e Blockchain para criar um legado digital seguro e imutável.</p>
+    <a href="dashboard.html" class="btn">Entrar no Painel</a>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section id="como-funciona" class="max-w-4xl mx-auto px-6 py-12">
-    <h3 class="text-2xl font-bold text-highlight mb-4">Como Funciona?</h3>
-    <ul class="space-y-4 text-gray-300">
-      <li>🔐 Conecte sua carteira e identifique-se.</li>
-      <li>🧠 Crie avatares com emoções e memórias personalizadas.</li>
-      <li>💠 Ganhe tokens SGL por interação e contribuição.</li>
-      <li>📦 Armazene cápsulas do tempo e crie seu legado imutável.</li>
+  <!-- Sobre -->
+  <section id="sobre">
+    <h2>📌 O Que é a SingulAI?</h2>
+    <p>SingulAI é uma plataforma revolucionária que permite armazenar memórias, interações e transações na blockchain, garantindo autenticidade e imutabilidade.</p>
+  </section>
+
+  <!-- Tecnologia -->
+  <section id="tecnologia">
+    <h2>🚀 Tecnologia de Ponta</h2>
+    <ul class="tech-list">
+      <li><img src="assets/ai.png" alt="AI" /> Inteligência Artificial Avançada</li>
+      <li><img src="assets/blockchain.png" alt="Blockchain" /> Blockchain para armazenamento imutável</li>
+      <li><img src="assets/connectivity.png" alt="Segurança" /> Segurança Digital de Alto Nível</li>
+      <li><img src="assets/stats.png" alt="Monitoramento" /> Plataforma de Monitoramento e Estatísticas</li>
     </ul>
   </section>
 
-  <!-- TECNOLOGIA -->
-  <section id="tecnologia" class="bg-soft text-center py-16">
-    <h3 class="text-2xl font-bold text-highlight mb-6">Tecnologia de Ponta</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left px-6">
-      <div>
-        <h4 class="text-lg font-semibold">🧬 IA Emocional</h4>
-        <p class="text-gray-400 text-sm">Simule interações profundas e humanas com avatares inteligentes.</p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold">💾 Blockchain</h4>
-        <p class="text-gray-400 text-sm">Garanta a imutabilidade das memórias e recompensas com contratos inteligentes.</p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold">📈 Tokens e Acessos</h4>
-        <p class="text-gray-400 text-sm">Distribua e gerencie SGL tokens em um ecossistema próprio.</p>
-      </div>
-    </div>
+  <!-- Segurança -->
+  <section id="seguranca">
+    <h2>🔐 Segurança e Privacidade</h2>
+    <p>Seus dados são protegidos com criptografia de ponta e armazenados de forma descentralizada, garantindo total segurança.</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="text-center text-gray-500 text-xs py-6">
-    &copy; 2025 SingulAI • Eternizando Memórias
+  <!-- Rodapé -->
+  <footer>
+    © 2025 SingulAI – IA e Blockchain para um Futuro Seguro
   </footer>
 
 </body>
 </html>
-=======
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SingulAI – Cápsula do Tempo Digital</title>
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-<body class="index-bg">
-  <div class="hero-container">
-    <header class="hero-header">
-      <h1>⏳ SingulAI</h1>
-      <p class="slogan">Guarde sua história. Deixe o tempo contar.</p>
-    </header>
-    <main class="hero-main">
-      <p class="intro">
-        Entre na <strong>cápsula do tempo digital</strong> onde avatares com identidade emocional guardam suas mensagens e memórias.
-      </p>
-      <div class="cta-buttons">
-        <a href="cadastro.html" class="btn-primary">🧬 Criar Conta</a>
-        <a href="login.html" class="btn-secondary">🔐 Entrar</a>
-      </div>
-    </main>
-    <footer class="hero-footer">
-      <small>🧠 powered by SingulAI Core • v1.0</small>
-    </footer>
-  </div>
-</body>
-</html>
->>>>>>> f59bff5c74c6c03b89b1de2f69724007900af619
